@@ -46,8 +46,9 @@ img{margin:15px;}
                padding-top: 4px;
                padding-bottom: 4px;
                padding-left: 8px;
-               padding-right:8px;
+               padding-right:8px;}
 
+input.checkbox{border-radius: 1px;
 
              }
 input[type="text"]{position:absolute;
@@ -55,7 +56,12 @@ input[type="text"]{position:absolute;
                    border-radius: 2px;
                    border:solid 1px #EE2C2C;
                    padding-top: 3px;
-                   padding-bottom:3px}
+                   padding-bottom:3px;
+                   color:#4e4e4e;
+                   }
+input:focus, input:hover {
+                         border:1px solid #4e4e4e;
+                          }
 h1{font-size: 20px;
    margin-top: 8px;
    margin-bottom: auto;}
