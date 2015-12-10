@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ACME Corp</title>
+    <link rel="stylesheet" href="acme.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+
+    <!-- JS will create all the elements -->
+<script type="text/javascript">
+
+    // Create the header
+var body = document.querySelector("body");
+var header = document.createElement("header");
+body.appendChild(header);
+
+// Create the nav
+var nav = document.createElement("nav");
+header.appendChild(nav);
+
+// Create the logo
+var img = document.createElement("img");
+img.setAttribute("src", "http://cloud.avandamiri.com/image/423B1n2p2v0U/acme-corp.jpg");
+nav.appendChild(img);
+
+// Create the sign up button
+var button = document.createElement("button");
+button.textContent = "Sign up";
+nav.appendChild(button);
+
+// Create the link
+var a = document.createElement("a");
+a.textContent = "Product";
+nav.appendChild(a);
+
+//Create the main content
+var main = document.createElement("main");
+body.appendChild(main);
+
+//Create the section
+var section = document.createElement("section");
+main.appendChild(section);
+
+//Create the header
+var h1 = document.createElement("h1");
+h1.textContent = "Welcome to ACME Corp!";
+section.appendChild(h1);
+
+
+
+//Create the p
+var p = document.createElement("p");
+p.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+section.appendChild(p);
+
+//Create the p
+var p = document.createElement("p");
+p.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
+section.appendChild(p);
+
+//Create the footer
+var footer = document.createElement("footer");
+footer.textContent = "Copyright,2015";
+body.appendChild(footer);
+
+
+</script>
+  </body>
+</html>

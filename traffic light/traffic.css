@@ -1,0 +1,38 @@
+header{text-align: center;}
+button{color: #ffffff;
+       border-radius:4px;
+       font-family: helvetica;
+       font-size: 16px;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       padding-left: 20px;
+       padding-right:20px;
+       margin-top: 10px;
+       margin-bottom: 40px;
+       margin-left: 5px;
+       margin-right:5px;
+       text-align: center;
+       background-color: #0e0e66;
+      }
+main{
+     }
+div.light{width:80px;
+          height:80px;
+          background-color: gray;
+          border-radius: 100%;
+          margin: 19px;
+
+           }
+.key:hover {background-color: rgb(#08083d);}
+.light.light-stop{background-color: red;}
+div.square{
+            width:120px;
+            height:320px;
+            background-color: #F0E68C;
+            border-radius: 10px;
+            border-width: 1px;
+            border-color:#a7a5a4;
+            border-style: solid;
+            margin top: 10px;
+            margin-left: 45%;
+          }
