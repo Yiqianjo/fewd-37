@@ -1,5 +1,11 @@
-header{text-align: center;}
-button{color: #ffffff;
+div{text-align: center;
+
+      }
+.operate {
+        margin-bottom: 1em;
+      }
+button{
+       color: #ffffff;
        border-radius:4px;
        font-family: helvetica;
        font-size: 16px;
@@ -7,31 +13,43 @@ button{color: #ffffff;
        padding-bottom: 10px;
        padding-left: 20px;
        padding-right:20px;
-       margin-top: 10px;
-       margin-bottom: 40px;
-       margin-left: 5px;
-       margin-right:5px;
-       text-align: center;
+       margin:10px auto;
        background-color: #0e0e66;
       }
-main{
-     }
-div.light{width:80px;
-          height:80px;
-          background-color: gray;
-          border-radius: 100%;
-          margin: 19px;
 
-           }
-.light.light-stop{background-color: red;}
-div.square{
+
+.square{
             width:120px;
             height:320px;
-            background-color: #F0E68C;
+            background-color: #4e4e4e;
             border-radius: 10px;
             border-width: 1px;
-            border-color:#a7a5a4;
+            border-color:#4e4e4e;
             border-style: solid;
-            margin top: 10px;
-            margin-left: 45%;
+            margin:0 auto;
+            }
+
+.light{     width:80px;
+            height:80px;
+            background-color: gray;
+            border-radius: 100%;
+            margin: 20px auto;
+            border-top-width: 4px;
+            border-bottom-width: 1px;
+            border: 2px solid black;
+            transition: background-color 150ms;
+                      }
+.stoplight.light-on{
+          background-color: red;
+          box-shadow: 0 10px 40px rgba(209, 43, 5, 0.4);
+            }
+
+.slowlight.light-on{
+        background-color: yellow;
+        box-shadow: 0 10px 40px rgba(255, 255, 0, 0.4);
           }
+
+.golight.light-on{
+        background-color: green;
+        box-shadow: 0 10px 40px rgba(0, 255, 0, 0.4);
+        }

@@ -7,37 +7,75 @@
 </head>
 
 <body>
-  <header>
-    <button class="light" id="stop">stop</button>
-    <button class="light" id="slow">Slow</button>
-    <button class="light" id="go">Go</button>
-    <button class="light" id="caution">Caution</button>
-  </header>
-  <main>
-  <div class="square">
-   <div class="go-light">
-     <div class="light light-go">
-     </div>
-   </div>
+  <div class="operate">
+    <button class="operate-stop">Stop</button>
+    <button class="operate-slow">Slow</button>
+    <button class="operate-go">Go</button>
+    <button class="operate-caution">Caution</button>
+  </div>
 
-   <div class="slow-light">
-     <div class="light light-slow">
-     </div>
-   </div>
+  <div class=square>
+    <div class="light stoplight"></div>
+    <div class="light slowlight"></div>
+    <div class="light golight"></div>
 
-   <div class="stop-light">
-     <div class="light light-stop">
-     </div>
-   </div>
- </main>
+
+ <div class="turnoff" style="display: none;">
+   <div class="light"></div>
+   <div class="light"></div>
+   <div class="light"></div>
+</div>
+</div>
+
+
+
+  </main>
   <script>
-  var stopButton=document.querySelector("#stop");
-  
-  function turnOnStopLight(event){background-color: red;
-  }
-  document.onclick = function() {}
-  .light.light-stop.addEventListener('click', buttonClicked);
 
+  var stopLight = document.querySelector(".stoplight");
+  var slowLight = document.querySelector(".slowlight");
+  var goLight = document.querySelector(".golight");
+//  var cautionLight = document.querySelector(".slowlight");
+
+  var stopOperate = document.querySelector(".operate-stop");
+  var slowOperate = document.querySelector(".operate-slow");
+  var goOperate = document.querySelector(".operate-go");
+//  var cautionOperate = document.querySelector(".operate-caution")
+
+//event listeners//
+  stopOperate.addEventListener("click", stop);
+  slowOperate.addEventListener("click", slow);
+  goOperate.addEventListener("click", go);
+//  cautionOperate.addEventListener("click", caution);
+
+  function stop(event) {
+    event.preventDefault();
+    stopLight.classList.add("light-on");
+    slowLight.classList.remove("light-on");
+    goLight.classList.remove("light-on");
+
+  }
+
+  function slow(event) {
+    event.preventDefault();
+    stopLight.classList.remove("light-on");
+    goLight.classList.remove("light-on");
+    slowLight.classList.add("light-on");
+  }
+
+  function go(event) {
+    event.preventDefault();
+    stopLight.classList.remove("light-on");
+    slowLight.classList.remove("light-on");
+    goLight.classList.add("light-on");
+  }
+
+//  function caution(event) {
+//    event.preventDefault();
+//    cautionLight(event);
+//    setInterval(function() {
+//      stopLight.classList.toggle(".slowlight.light-on");
+//    }, 1000);
 
   </script>
 

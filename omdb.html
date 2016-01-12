@@ -1,0 +1,12 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$.get("http://omdbapi.com/?s=matrix", resultsReceived);
+
+function resultsReceived(results) {
+   console.log("the data from omdb is:", results);
+for (var i = 0; i < results["search"].length; i++) {
+  var movie = result ["search"][i];
+  console.log(i,movie.["title"])
+}
+}
+</script>
