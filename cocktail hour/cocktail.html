@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cocktail Hour!</title>
+  <link rel="stylesheet" href="cocktail.css" media="screen" >
+    <!-- i added jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+<section class="cover" id="cover">
+  <div class = "title">
+    <img src="title.png">
+  </div>
+
+  <a href="#firststep"><button class="button"><span>PLAY</span></button></a>
+</section>
+
+<section class="firststep" id="firststep">
+   <h1 class="title" >Step1:</h1>
+   <h2 class="subtitle">Choose you favorite liquor</h2>
+   <div class="optionbox">
+       <div class="optionbox img" value="vodka" id="vodka"><img src="vodka.png"></div>
+       <div class="optionbox img" value="whiskey" id="whiskey"><img src="whiskey.png"/></div>
+       <div class="optionbox img" value="gin" id="gin"><img src="gin.png"></div>
+       <div class="optionbox img" value="tequila" id="tequila"><img src="tequila.png"/></div>
+   </div>
+   <a href="#secondstep"><button class="nextBtn"><span>Next</span></button></a>
+
+
+<section class="secondstep" id="secondstep">
+  <h1 class="title" >Step2:</h1>
+  <h2 class="subtitle">Choose a glass</h2>
+  <div class="optionbox2">
+  <div class="optionbox2 img" value="aglass" id="aglass"><img src="aglass.png"/></div>
+  <div class="optionbox2 img" value="bglass" id="bglass"><img src="bglass.png"/></div>
+  <div class="optionbox2 img" value="cglass" id="cglass"><img src="cglass.png"/></div>
+  <div class="optionbox2 img" value="dglass" id="dglass"><img src="dglass.png"/></div>
+  </div>
+  <a href="#thirdstep"><button class="nextBtn"><span>Next</span></button></a>
+</section>
+
+
+<section class="thirdstep" id="thirdstep">
+  <h1 class="title" >Step3:</h1>
+  <h2 class="subtitle">Choose a flavor</h2>
+  <div class="optionbox3 img">
+  <div class="optionbox3 img" value="watermelon" id="watermelon"><img src="watermelon.png"/></div>
+  <div class="optionbox3 img" value="olives" id="olives"><img src="olives.png"/></div>
+  <div class="optionbox3 img" value="lime" id="lime"><img src="lime.png"/></div>
+  <div class="optionbox3 img" value="orange" id="orange"><img src="orange.png"/></div>
+  </div>
+  <a href="#result"><button class="enjoyBtn nextBtn"><span>Enjoy!</span></button></a>
+</section>
+
+
+<section class="result" id="result">
+<div class="optionbox4">
+<div id="finalText"></div>
+<a href="#cover"><button class="startBtn"><span>Start Over!</span></button></a>
+
+  <div id="finalResult"></div>
+
+</div>
+</section>
+
+
+</body>
+
+<script>
+
+//
+var liquor, glass, fruit;
+
+
+//(".optionbox")get the element with this class, .click is the event listener,
+//attach the event to optionbox.
+$( ".optionbox" ).click(function(e) {
+    var val = $(e.target).parent().attr('value');
+    liquor = val;
+
+    console.log(liquor);
+});
+
+$( ".optionbox2" ).click(function(e) {
+    var val = $(e.target).parent().attr('value');
+    glass = val;
+    console.log(glass);
+});
+
+$( ".optionbox3" ).click(function(e) {
+    var val = $(e.target).parent().attr('value');
+    fruit = val;
+    console.log(fruit);
+});
+
+//$(e.target).addClass('active');
+//$('.optionbox.active').removeClass('active');
+
+
+//$(e.target).addClass('active');
+
+//$('.optionbox.active').removeClass('active');
+
+
+//$('.optionbox2.active').removeClass('active');
+//$('.optionbox3.active').removeClass('active');
+
+
+//$( ".nextBtn" ).click(function(e) {
+    //console.log(results);
+//});
+
+
+$( ".enjoyBtn" ).click(function(e) {
+
+    var finalResult ="beer.png";
+    var finalText = "No drinks like that. Try a beer?";
+    if( liquor === 'gin' && glass === 'bglass' && fruit === 'olives' ) {
+        finalResult = "martini.png";
+        finalText = "You just made a Martini!";
+    }else if( liquor === 'whiskey' && glass === 'cglass' && fruit === 'orange' ) {
+        finalResult = "oldfashioned.png";
+        finalText = "You just made an Oldfashioned!";
+      }else if( liquor === 'vodka' && glass === 'dglass' && fruit === 'watermelon' ) {
+          finalResult = "watermelonjuice.png";
+          finalText = "You just made a Watermelon juice!";
+      }else if( liquor === 'tequila' && glass === 'aglass' && fruit === 'lime' ) {
+          finalResult = "margarita.png";
+          finalText = "You just made a Margarita!";
+     }else if( liquor === 'tequila' && glass === 'cglass' && fruit === 'lime' ) {
+         finalResult = "margarita2.png";
+         finalText = "You just made a Margarita!";
+       }
+
+    // else if (jQuery.inArray( "whiskey", results ) > -1 && jQuery.inArray( "aglass", results ) > -1 &&  jQuery.inArray( "orange", results ) > -1 ) {
+    //     finalResult = "oldfashioned.png"
+    // }
+
+    //show the proper result
+
+    $('#finalResult').html('<img src="'+ finalResult + '"/>');
+    $('#finalText').html(finalText);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*$('#lock').click(function() {
+    $(this).siblings().andSelf().fadeOut();
+    $('#div_lock').fadeIn();
+})
+
+$('#unlock').click(function() {
+    $('#div_lock').fadeOut();
+    $(this).closest('div').siblings().fadeIn();
+})​
+
+*/
+
+</script>
+
+
+
+</body>
+</html>

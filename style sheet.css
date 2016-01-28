@@ -1,0 +1,86 @@
+  header{background-color: #c4c4c4;
+        border-bottom: 1px solid #4e4e4e;}
+  body{font-family: 'lucida grande', sans-serif;
+  margin:0;
+    background-image:url(http://cloud.avandamiri.com/image/3N410e2Q2Z3F/background.png;)}
+  section{position:relative;
+          border-width: 8px;
+          text-align:left;
+          padding: 20px;
+          background-color: #ffffff;
+        font-family: helvetica;
+      margin:10%auto;
+  box-shadow: 0px 5px 20px #bebeb4;
+  height: 265px;
+border-radius:8px;}
+main{border-bottom:2px solid #bfbfbe;
+  width: 700px;
+  margin:0 auto;
+  }
+img{margin:15px;}
+  button{background-color: #2e75c6;
+         border-radius:8px;
+         color:white;
+         font-family: helvetica;
+         font-size: 14px;
+         float: right;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         padding-left: 20px;
+         padding-right:20px;
+         margin-top: 30px;
+         margin-bottom: 40px;
+         margin-left: 10px;
+         margin-right:20px;
+        }
+.signup_button{position: absolute;
+              left:10px;
+              top:220px;
+              border: solid 1px #4e4e4e;
+              background-color: #ffffff;
+               text-align:left;
+               color:#4e4e4e;
+               border-radius:4px;
+               float: left;
+               font-size: 10px;
+               padding-top: 4px;
+               padding-bottom: 4px;
+               padding-left: 8px;
+               padding-right:8px;}
+
+input.checkbox{border-radius: 1px;
+
+             }
+input[type="text"]{position:absolute;
+                    left:130px;
+                   border-radius: 2px;
+                   border:solid 1px #EE2C2C;
+                   padding-top: 3px;
+                   padding-bottom:3px;
+                   color:#4e4e4e;
+                   }
+input:focus, input:hover {
+                         border:1px solid #4e4e4e;
+                          }
+input:active{border: 1px solid #5E8D00;}
+h1{font-size: 20px;
+   margin-top: 8px;
+   margin-bottom: auto;}
+        a{color:white;
+        font-family: helvetica;
+        font-size: 18px;
+        float: right;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+        margin-right:20px}
+        footer{text-align: center;
+               color: #bbbcc1;
+             font-family: helvetica;
+           border-top: 1px solid #ffffff;
+           padding-top: 20px;
+
+           height:220px;
+           width: 620px;
+           margin: 0 auto;
+            }

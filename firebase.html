@@ -1,0 +1,35 @@
+
+<script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+<script>
+  var firebase = new Firebase("https://blinding-inferno-7422.firebaseio.com");
+
+
+  var mustang =
+  firebase.push({
+  username: "Yiqian",
+  messageBody:"Hello!"
+});
+
+firebase.limitToLast(100).on('child_added', function (snapshot) {
+  var data = snapshot.val();
+});
+
+//creating a chat massage:
+//1.Add a form
+//2.Listen to the form submit (addEventListener)
+//3.When form is submitted, save to Firebase (firebase.push({...}))
+//4.When form is submitted, prevent the default (event.preventDefault())
+//5.Reset the form (maybe even focus the text box)
+
+//display chat message:
+//1.Create a div (or li) to contain the message
+//2.Use the messageBody from Firebase to set the textContent
+
+//var message = {
+//      messageBody: "yo",
+//      username:"avand"
+
+
+}
+
+</script>

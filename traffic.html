@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Traffic Light</title>
+  <link rel="stylesheet" href="traffic.css" media="screen" >
+</head>
+
+<body>
+  <div class="operate">
+    <button class="operate-stop">Stop</button>
+    <button class="operate-slow">Slow</button>
+    <button class="operate-go">Go</button>
+    <button class="operate-caution">Caution</button>
+  </div>
+
+  <div class=square>
+    <div class="light stoplight"></div>
+    <div class="light slowlight"></div>
+    <div class="light golight"></div>
+
+
+ <div class="turnoff" style="display: none;">
+   <div class="light"></div>
+   <div class="light"></div>
+   <div class="light"></div>
+</div>
+</div>
+
+
+
+  </main>
+  <script>
+
+  var stopLight = document.querySelector(".stoplight");
+  var slowLight = document.querySelector(".slowlight");
+  var goLight = document.querySelector(".golight");
+//  var cautionLight = document.querySelector(".slowlight");
+
+  var stopOperate = document.querySelector(".operate-stop");
+  var slowOperate = document.querySelector(".operate-slow");
+  var goOperate = document.querySelector(".operate-go");
+//  var cautionOperate = document.querySelector(".operate-caution")
+
+//event listeners//
+  stopOperate.addEventListener("click", stop);
+  slowOperate.addEventListener("click", slow);
+  goOperate.addEventListener("click", go);
+//  cautionOperate.addEventListener("click", caution);
+
+  function stop(event) {
+    event.preventDefault();
+    stopLight.classList.add("light-on");
+    slowLight.classList.remove("light-on");
+    goLight.classList.remove("light-on");
+
+  }
+
+  function slow(event) {
+    event.preventDefault();
+    stopLight.classList.remove("light-on");
+    goLight.classList.remove("light-on");
+    slowLight.classList.add("light-on");
+  }
+
+  function go(event) {
+    event.preventDefault();
+    stopLight.classList.remove("light-on");
+    slowLight.classList.remove("light-on");
+    goLight.classList.add("light-on");
+  }
+
+//  function caution(event) {
+//    event.preventDefault();
+//    cautionLight(event);
+//    setInterval(function() {
+//      stopLight.classList.toggle(".slowlight.light-on");
+//    }, 1000);
+
+  </script>
+
+</body>
+</html>
