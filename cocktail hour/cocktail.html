@@ -79,8 +79,7 @@ var liquor, glass, fruit;
 $( ".optionbox" ).click(function(e) {
     var val = $(e.target).parent().attr('value');
     liquor = val;
-    //$(e.target).addClass('active');
-    //$('.optionbox.active').removeClass('active');
+
     console.log(liquor);
 });
 
@@ -96,7 +95,8 @@ $( ".optionbox3" ).click(function(e) {
     console.log(fruit);
 });
 
-
+//$(e.target).addClass('active');
+//$('.optionbox.active').removeClass('active');
 
 
 //$(e.target).addClass('active');
@@ -112,14 +112,11 @@ $( ".optionbox3" ).click(function(e) {
     //console.log(results);
 //});
 
-//tally the results
+
 $( ".enjoyBtn" ).click(function(e) {
 
     var finalResult ="beer.png";
     var finalText = "No drinks like that. Try a beer?";
-    //here, we are using an array to check for which ingredients are in the array
-    //if you want to optimize, you can look at http://stackoverflow.com/questions/9204283/how-to-check-whether-multiple-values-exist-within-an-javascript-array
-    // 'gin' is the value ||means or; only one has to be true,  &&means both of them have to be true,
     if( liquor === 'gin' && glass === 'bglass' && fruit === 'olives' ) {
         finalResult = "martini.png";
         finalText = "You just made a Martini!";
