@@ -80,6 +80,8 @@ var liquor, glass, fruit;
 $( ".optionbox" ).click(function(e) {
     var val = $(e.target).parent().attr('value');
     liquor = val;
+    $(e.target).addClass('active');
+    $('.optionbox.active').removeClass('active');
     console.log(liquor);
 });
 
@@ -96,6 +98,15 @@ $( ".optionbox3" ).click(function(e) {
 });
 
 
+
+
+//$(e.target).addClass('active');
+
+//$('.optionbox.active').removeClass('active');
+
+
+//$('.optionbox2.active').removeClass('active');
+//$('.optionbox3.active').removeClass('active');
 
 
 //$( ".nextBtn" ).click(function(e) {

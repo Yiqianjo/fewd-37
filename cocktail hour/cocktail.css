@@ -100,17 +100,14 @@
            transition:width 0.2s;
            }
 .optionbox img:hover {
-                       width: 333px;
-                       height: auto;
+                     cursor: pointer; cursor: hand
                      }
 
  .optionbox2 img:hover {
-                      width: 225px;
-                      height: auto;
+                      cursor: pointer; cursor: hand
                             }
   .optionbox3 img:hover {
-                     width: 225px;
-                    height: auto;
+                     cursor: pointer; cursor: hand
                         }
 .optionbox3 img,
 .optionbox2 img {
@@ -119,7 +116,11 @@
           transition:width 0.2s;
       }
 
+.optionbox.active{
+       border-style: solid;
+       border-color: green;
 
+         }
 
 .button{
       margin-top: 360px;
