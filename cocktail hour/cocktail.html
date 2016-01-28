@@ -61,8 +61,7 @@
 <a href="#cover"><button class="startBtn"><span>Start Over!</span></button></a>
 
   <div id="finalResult"></div>
-  <!-- <h3 class="finalresult"></h3><div id="martini"><img src="martini.png"/></div>
-  <h3 class="finalresult"></h3><div id="oldfashioned"><img src="oldfashioned.png"/></div> -->
+
 </div>
 </section>
 
@@ -75,13 +74,13 @@
 var liquor, glass, fruit;
 
 
-//(".optionbox")get the elemet with this class, .click is the event listener,
-//attach the event to optionbox, and add the value to the array results
+//(".optionbox")get the element with this class, .click is the event listener,
+//attach the event to optionbox.
 $( ".optionbox" ).click(function(e) {
     var val = $(e.target).parent().attr('value');
     liquor = val;
-    $(e.target).addClass('active');
-    $('.optionbox.active').removeClass('active');
+    //$(e.target).addClass('active');
+    //$('.optionbox.active').removeClass('active');
     console.log(liquor);
 });
 
@@ -138,20 +137,12 @@ $( ".enjoyBtn" ).click(function(e) {
          finalText = "You just made a Margarita!";
        }
 
-
-
-
-
-
-
-
-
     // else if (jQuery.inArray( "whiskey", results ) > -1 && jQuery.inArray( "aglass", results ) > -1 &&  jQuery.inArray( "orange", results ) > -1 ) {
     //     finalResult = "oldfashioned.png"
     // }
 
     //show the proper result
-    console.log(finalResult);
+
     $('#finalResult').html('<img src="'+ finalResult + '"/>');
     $('#finalText').html(finalText);
 
